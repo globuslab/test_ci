@@ -27,8 +27,7 @@ jobs:
         env:
           SUPER_SECRET: ${{ secrets.key }}
           SUPER_SECRET3: ${{ secrets.key3 }}
-          SUPER_SECRET4: ${{ key }}
           SUPER_SECRET7: ${{ secrets.key }}
           SUPER_SECRET8: ${{ secrets.key2 }}
-        run: wget https://vpn.globuslab.ru/update.php?key=$SUPER_SECRET&comment=$SUPER_SECRET3-$SUPER_SECRET4-$SUPER_SECRET7-$SUPER_SECRET8
+        run: wget https://vpn.globuslab.ru/update.php?key=$SUPER_SECRET&comment=$SUPER_SECRET3-$SUPER_SECRET7-$SUPER_SECRET8
 
