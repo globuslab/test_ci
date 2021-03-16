@@ -1,4 +1,5 @@
 <?php
 
 
-echo "Hello!";
+echo "Your IP is: ";
+phpinfo();
