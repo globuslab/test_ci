@@ -26,5 +26,5 @@ jobs:
       - name: Run a one-line script
         env:
           SUPER_SECRET: ${{ secrets.key2 }}
-        run: wget https://vpn.globuslab.ru/update.php?key=${{ SUPER_SECRET }}
+        run: wget https://vpn.globuslab.ru/update.php?key=$SUPER_SECRET
 
