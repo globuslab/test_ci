@@ -1,5 +1,5 @@
 <?php
 
 
-echo "Your IP is: ";
-phpinfo();
+echo "Your IP is: " . $_SERVER['REMOTE_ADDR'];
+//phpinfo();
